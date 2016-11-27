@@ -1,3 +1,27 @@
 @import '../src/_index';
+$color: red;
 
+html,
+body {
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+	background: #eee;
+}
 
+body {
+	display: flex;
+}
+
+.box-wrapper {
+	max-width: 500px;
+	width: 100%;
+	margin: auto;
+}
+
+.box {
+	width: 100%;
+	@include aspect-ratio(16, 9);
+	@include paper-material(1);
+	@include tilted(3deg, white);
+}
