@@ -1,0 +1,13 @@
+@mixin text-overflow($line: 1, $substract: 0) {
+    overflow: hidden;
+    @if $line==1 {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 100% - $substract;
+    }
+    @else {
+        display: -webkit-box;
+        -webkit-line-clamp: $line;
+        -webkit-box-orient: vertical;
+    }
+}
